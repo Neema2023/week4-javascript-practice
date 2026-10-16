@@ -71,3 +71,21 @@ if (fizzNumber % 3 === 0 && fizzNumber % 5 === 0) {
 } else {
     console.log(fizzNumber);
 }
+
+// TASK 5: Sum of Numbers from 1 to N
+
+// Pseudocode:
+// 1. Store a number N.
+// 2. Set total to 0.
+// 3. Loop from 1 to N.
+// 4. Add each number to total.
+// 5. Print the total.
+
+const n = 5;
+let total = 0;
+
+for (let i = 1; i <= n; i++) {
+    total = total + i;
+}
+
+console.log("The sum is:", total);
