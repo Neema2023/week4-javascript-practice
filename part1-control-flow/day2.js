@@ -103,3 +103,21 @@ const tableNumber = 3;
 for (let i = 1; i <= 10; i++) {
     console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
 }
+
+// TASK 8: Factorial of a Number
+
+// Pseudocode:
+// 1. Store a non-negative integer.
+// 2. Set factorial to 1.
+// 3. Loop from 1 to the number.
+// 4. Multiply factorial by i.
+// 5. Print the result.
+
+const factorialNumber = 5;
+let factorial = 1;
+
+for (let i = 1; i <= factorialNumber; i++) {
+    factorial = factorial * i;
+}
+
+console.log("Factorial is:", factorial);
