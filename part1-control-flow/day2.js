@@ -121,3 +121,25 @@ for (let i = 1; i <= factorialNumber; i++) {
 }
 
 console.log("Factorial is:", factorial);
+
+// TASK 9: Reverse a Number
+
+// Pseudocode:
+// 1. Store a positive whole number.
+// 2. Set reversed to 0.
+// 3. Get the last digit.
+// 4. Add it to reversed.
+// 5. Remove the last digit.
+// 6. Repeat until the number becomes 0.
+// 7. Print the reversed number.
+
+let reverseNumber = 1234;
+let reversed = 0;
+
+while (reverseNumber > 0) {
+    let digit = reverseNumber % 10;
+    reversed = reversed * 10 + digit;
+    reverseNumber = Math.floor(reverseNumber / 10);
+}
+
+console.log("Reversed number:", reversed);
