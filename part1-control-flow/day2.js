@@ -50,3 +50,24 @@ if (first >= second && first >= third) {
 } else {
     console.log("The largest number is:", third);
 }
+
+// TASK 4: FizzBuzz
+
+// Pseudocode:
+// 1. Store a number.
+// 2. If divisible by both 3 and 5, print "FizzBuzz".
+// 3. Else if divisible by 3, print "Fizz".
+// 4. Else if divisible by 5, print "Buzz".
+// 5. Otherwise, print the number.
+
+const fizzNumber = 15;
+
+if (fizzNumber % 3 === 0 && fizzNumber % 5 === 0) {
+    console.log("FizzBuzz");
+} else if (fizzNumber % 3 === 0) {
+    console.log("Fizz");
+} else if (fizzNumber % 5 === 0) {
+    console.log("Buzz");
+} else {
+    console.log(fizzNumber);
+}
