@@ -89,3 +89,17 @@ for (let i = 1; i <= n; i++) {
 }
 
 console.log("The sum is:", total);
+
+// TASK 6: Multiplication Table
+
+// Pseudocode:
+// 1. Store a number.
+// 2. Loop from 1 to 10.
+// 3. Multiply the number by i.
+// 4. Print the result.
+
+const tableNumber = 3;
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
+}
