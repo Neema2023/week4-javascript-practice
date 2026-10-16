@@ -29,3 +29,24 @@ if (number2 > 0) {
 } else {
     console.log("zero");
 }
+
+// TASK 3: Find the Largest of Three Numbers
+
+// Pseudocode:
+// 1. Store three numbers.
+// 2. Check if the first number is greater than or equal to both others.
+// 3. Otherwise, check if the second number is greater than or equal to both others.
+// 4. Otherwise, the third number is the largest.
+// 5. Print the largest number.
+
+const first = 15;
+const second = 27;
+const third = 10;
+
+if (first >= second && first >= third) {
+    console.log("The largest number is:", first);
+} else if (second >= first && second >= third) {
+    console.log("The largest number is:", second);
+} else {
+    console.log("The largest number is:", third);
+}
