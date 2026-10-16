@@ -1,10 +1,4 @@
-
-/*
-PART 1: CONTROL FLOW AND LOOPS
-*/
-
 // TASK 1: Even or Odd
-
 // Pseudocode:
 // 1. Store a number.
 // 2. Check if the number divided by 2 has a remainder of 0.
@@ -14,209 +8,193 @@ PART 1: CONTROL FLOW AND LOOPS
 const number = 8;
 
 if (number % 2 === 0) {
-    console.log("even");
+    console.log(" this is even number");
 } else {
-    console.log("odd");
+    console.log("this is odd number");
 }
 
-
-// TASK 2: Grade Calculator
+// TASK 2: Positive, Negative, or Zero
 
 // Pseudocode:
-// 1. Store a score between 0 and 100.
-// 2. Reject the score if it is below 0 or above 100.
-// 3. If the score is 80 or above, print A.
-// 4. Otherwise, check the other grade ranges.
-// 5. Print the correct grade.
+// 1. Store a number.
+// 2. If the number is greater than 0, print "positive".
+// 3. If the number is less than 0, print "negative".
+// 4. Otherwise, print "zero".
 
-const score = 85;
+const number2 = -5;
 
-if (score < 0 || score > 100) {
-    console.log("Invalid score");
-} else if (score >= 80) {
-    console.log("A");
-} else if (score >= 70) {
-    console.log("B");
-} else if (score >= 60) {
-    console.log("C");
-} else if (score >= 50) {
-    console.log("D");
+if (number2 > 0) {
+    console.log("positive");
+} else if (number2 < 0) {
+    console.log("negative");
 } else {
-    console.log("F");
+    console.log("zero");
 }
 
-
-// TASK 3: Ticket Price
+// TASK 3: Find the Largest of Three Numbers
 
 // Pseudocode:
-// 1. Store the person's age and student status.
-// 2. If the person is over 65, the ticket is free.
-// 3. Otherwise, if the person is under 12, the price is 2000 RWF.
-// 4. Otherwise, if the person is a student, the price is 3000 RWF.
-// 5. Otherwise, the adult price is 5000 RWF.
-// 6. Print the ticket price.
+// 1. Store three numbers.
+// 2. Check if the first number is greater than or equal to both others.
+// 3. Otherwise, check if the second number is greater than or equal to both others.
+// 4. Otherwise, the third number is the largest.
+// 5. Print the largest number.
 
-const age = 20;
-const isStudent = true;
-let ticketPrice;
+const first = 15;
+const second = 27;
+const third = 10;
 
-if (age > 65) {
-    ticketPrice = 0;
-} else if (age < 12) {
-    ticketPrice = 2000;
-} else if (isStudent) {
-    ticketPrice = 3000;
+if (first >= second && first >= third) {
+    console.log("The largest number is:", first);
+} else if (second >= first && second >= third) {
+    console.log("The largest number is:", second);
 } else {
-    ticketPrice = 5000;
+    console.log("The largest number is:", third);
 }
 
-if (ticketPrice === 0) {
-    console.log("Ticket is free");
+// TASK 4: FizzBuzz
+
+// Pseudocode:
+// 1. Store a number.
+// 2. If divisible by both 3 and 5, print "FizzBuzz".
+// 3. Else if divisible by 3, print "Fizz".
+// 4. Else if divisible by 5, print "Buzz".
+// 5. Otherwise, print the number.
+
+const fizzNumber = 15;
+
+if (fizzNumber % 3 === 0 && fizzNumber % 5 === 0) {
+    console.log("FizzBuzz");
+} else if (fizzNumber % 3 === 0) {
+    console.log("Fizz");
+} else if (fizzNumber % 5 === 0) {
+    console.log("Buzz");
 } else {
-    console.log("Ticket price:", ticketPrice, "RWF");
+    console.log(fizzNumber);
 }
 
-
-// TASK 4: Day Planner
+// TASK 5: Sum of Numbers from 1 to N
 
 // Pseudocode:
-// 1. Store a day name.
-// 2. Use switch to check the day.
-// 3. Print the class activity for Monday to Friday.
-// 4. Print "No class" on weekends.
+// 1. Store a number N.
+// 2. Set total to 0.
+// 3. Loop from 1 to N.
+// 4. Add each number to total.
+// 5. Print the total.
 
-const day = "Monday";
+const n = 5;
+let total = 0;
 
-switch (day) {
-    case "Monday":
-        console.log("Monday: JavaScript basics");
-        break;
-    case "Tuesday":
-        console.log("Tuesday: Conditions");
-        break;
-    case "Wednesday":
-        console.log("Wednesday: Loops");
-        break;
-    case "Thursday":
-        console.log("Thursday: Functions");
-        break;
-    case "Friday":
-        console.log("Friday: Practice and review");
-        break;
-    case "Saturday":
-    case "Sunday":
-        console.log("No class");
-        break;
-    default:
-        console.log("Invalid day");
+for (let i = 1; i <= n; i++) {
+    total = total + i;
 }
 
+console.log("The sum is:", total);
 
-// TASK 5: Countdown
+// TASK 6: Multiplication Table
 
 // Pseudocode:
-// 1. Start at 10.
-// 2. Print each number while counting down to 1.
-// 3. Print "Liftoff!" after the countdown.
+// 1. Store a number.
+// 2. Loop from 1 to 10.
+// 3. Multiply the number by i.
+// 4. Print the result.
 
-for (let i = 10; i >= 1; i--) {
-    console.log(i);
+const tableNumber = 3;
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`${tableNumber} x ${i} = ${tableNumber * i}`);
 }
 
-console.log("Liftoff!");
-
-
-// TASK 6: Sum and Average Using for...of
+// TASK 8: Factorial of a Number
 
 // Pseudocode:
-// 1. Store the given array of numbers.
-// 2. Set sum to 0.
-// 3. Use for...of to add each number to sum.
-// 4. Calculate the average.
-// 5. Print the sum and average.
+// 1. Store a non-negative integer.
+// 2. Set factorial to 1.
+// 3. Loop from 1 to the number.
+// 4. Multiply factorial by i.
+// 5. Print the result.
 
-const scores = [45, 78, 90, 62, 88];
-let sum = 0;
+const factorialNumber = 5;
+let factorial = 1;
 
-for (const value of scores) {
-    sum += value;
+for (let i = 1; i <= factorialNumber; i++) {
+    factorial = factorial * i;
 }
 
-const average = sum / scores.length;
+console.log("Factorial is:", factorial);
 
-console.log("Sum:", sum);
-console.log("Average:", average);
-
-
-// TASK 7: Find the First Number Greater Than 100
+// TASK 9: Reverse a Number
 
 // Pseudocode:
-// 1. Store an array of numbers.
-// 2. Loop through the array.
-// 3. If a number is greater than 100, print it.
-// 4. Use break to stop the loop.
+// 1. Store a positive whole number.
+// 2. Set reversed to 0.
+// 3. Get the last digit.
+// 4. Add it to reversed.
+// 5. Remove the last digit.
+// 6. Repeat until the number becomes 0.
+// 7. Print the reversed number.
 
-const numbers = [25, 60, 95, 120, 150];
+let reverseNumber = 1234;
+let reversed = 0;
 
-for (const value of numbers) {
-    if (value > 100) {
-        console.log("First number greater than 100:", value);
-        break;
+while (reverseNumber > 0) {
+    let digit = reverseNumber % 10;
+    reversed = reversed * 10 + digit;
+    reverseNumber = Math.floor(reverseNumber / 10);
+}
+
+console.log("Reversed number:", reversed);
+
+// TASK 10: Check if a Number Is Prime
+
+// Pseudocode:
+// 1. Store a number.
+// 2. Assume it is prime.
+// 3. Numbers below 2 are not prime.
+// 4. Check whether any number from 2 to number - 1 divides it evenly.
+// 5. If one does, the number is not prime.
+// 6. Print the result.
+
+const primeNumber = 7;
+let isPrime = true;
+
+if (primeNumber < 2) {
+    isPrime = false;
+} else {
+    for (let i = 2; i < primeNumber; i++) {
+        if (primeNumber % i === 0) {
+            isPrime = false;
+            break;
+        }
     }
 }
 
-
-// TASK 8: Skip Negatives
-
-// Pseudocode:
-// 1. Store an array containing positive and negative numbers.
-// 2. Loop through the array.
-// 3. If a number is negative, skip it using continue.
-// 4. Otherwise, print the number.
-
-const values = [10, -5, 20, -3, 0, 8];
-
-for (const value of values) {
-    if (value < 0) {
-        continue;
-    }
-
-    console.log(value);
+if (isPrime) {
+    console.log(primeNumber, "is a prime number");
+} else {
+    console.log(primeNumber, "is not a prime number");
 }
 
 
-// TASK 9: Multiplication Table
 
-// Pseudocode:
-// 1. Loop from 1 to 12.
-// 2. Multiply 7 by each number.
-// 3. Print the result in the required format.
+/*
+CHALLENGE: RIGHT-ANGLED TRIANGLE WITH 5 ROWS
 
-for (let i = 1; i <= 12; i++) {
-    console.log(`7 x ${i} = ${7 * i}`);
-}
+Pseudocode:
+1. Start an outer loop from row 1 to row 5.
+2. For each row, start an inner loop from 1 to the current row.
+3. Add one star during each inner-loop iteration.
+4. Print the stars on a new line after each row.
+*/
 
+console.log("\nChallenge: Right-angled triangle");
 
-// TASK 10: FizzBuzz with Kigali
+for (let row = 1; row <= 5; row++) {
+    let stars = "";
 
-// Pseudocode:
-// 1. Loop through numbers from 1 to 100.
-// 2. If a number is divisible by both 3 and 5, print "FizzBuzz".
-// 3. Otherwise, if divisible by 7, print "Kigali".
-// 4. Otherwise, if divisible by 3, print "Fizz".
-// 5. Otherwise, if divisible by 5, print "Buzz".
-// 6. Otherwise, print the number.
-
-for (let i = 1; i <= 100; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 7 === 0) {
-        console.log("Kigali");
-    } else if (i % 3 === 0) {
-        console.log("Fizz");
-    } else if (i % 5 === 0) {
-        console.log("Buzz");
-    } else {
-        console.log(i);
+    for (let column = 1; column <= row; column++) {
+        stars += "*";
     }
+
+    console.log(stars);
 }
